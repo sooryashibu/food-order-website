@@ -1,4 +1,4 @@
-// src/pages/CheckoutPage.jsx
+
 import React from "react";
 
 const CheckoutPage = ({ cart, removeFromCart }) => {

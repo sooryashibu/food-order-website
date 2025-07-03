@@ -1,0 +1,81 @@
+/* src/styles/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Main content area to prevent header overlap */
+.main-content {
+  margin-top: 80px; /* Adjust this margin to match the height of your header */
+}
+
+/* Footer Styling */
+footer {
+  padding-top: 20px;
+  background-color: #fff;
+}
+
+/* Dark mode styling */
+html.dark body {
+  background-color: #1a202c;
+  color: white;
+}
+
+/* Dark header and footer */
+html.dark header,
+html.dark footer {
+  background-color: #2d3748;
+  color: white;
+}
+
+/* Links in dark mode */
+html.dark a {
+  color: #63b3ed;
+}
+
+/* Text styling in dark mode */
+html.dark .text-gray-800,
+html.dark .text-gray-500,
+html.dark .text-black {
+  color: white !important;
+}
+
+/* Background color in dark mode */
+html.dark .bg-white {
+  background-color: #2d3748 !important;
+}
+
+/* Inputs, selects, and textareas in dark mode */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #4a5568;
+  color: white;
+  border-color: #718096;
+}
+
+/* Button styling */
+button {
+  background-color: #3182ce;
+  color: white;
+}
+
+html.dark button {
+  background-color: #63b3ed;
+  color: black;
+}
+
+/* Cart Icon */
+header .relative a img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

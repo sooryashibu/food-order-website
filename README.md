@@ -8,7 +8,7 @@ The **Food Order Website** is an online platform designed to provide users with 
 ## Admin Access
 To access the admin panel and manage products, use the following credentials:
 
-- **Username**: admin
+- **Username**: admin@example.com
 - **Password**: admin123
 
 

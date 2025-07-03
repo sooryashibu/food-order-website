@@ -169,7 +169,7 @@ Validate that the dark/light mode toggle works across pages.
 
 
 
-Vercel:[ https://vercel.com/](https://food-order-website-virid.vercel.app/)
+Vercel:https://food-order-website-virid.vercel.app/
 
 GitHub Pages: https://github.com/sooryashibu/food-order-website
 

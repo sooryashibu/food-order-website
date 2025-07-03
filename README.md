@@ -165,13 +165,11 @@ Ensure the cart functionality works properly, including the adding and removing 
 
 Validate that the dark/light mode toggle works across pages.
 
-4. **Deployment**
+4. **Deployed on**
 
-You can deploy the app using services like:
 
-Vercel: https://vercel.com/
 
-Netlify: https://www.netlify.com/
+Vercel:[ https://vercel.com/](https://food-order-website-virid.vercel.app/)
 
-GitHub Pages: https://pages.github.com/
+GitHub Pages: https://github.com/sooryashibu/food-order-website
 

@@ -1,7 +1,30 @@
-
-import React from "react";
+import React, { useState } from "react";
 
 const ContactUsPage = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Validation: Ensure all fields are filled
+    if (!name || !email || !message) {
+      setError("All fields are required!");
+      return;
+    }
+    
+    // Reset error and show success alert
+    setError("");
+    alert("Your message has been submitted successfully!");
+    
+    // Clear form
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   return (
     <div className="contact-us-page min-h-screen bg-gray-100 py-8">
       <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
@@ -27,24 +50,38 @@ const ContactUsPage = () => {
           <h3 className="text-2xl font-semibold mb-4">Get In Touch</h3>
           <p>If you have any questions, feel free to reach out to us using the details above or by filling out the contact form below:</p>
 
-          {/* Dummy form for contact */}
-          <form className="mt-4">
+          {/* Contact Form */}
+          <form onSubmit={handleSubmit} className="mt-4">
             <div className="flex flex-col space-y-4">
+              {/* Name Field */}
               <input
                 type="text"
                 placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="p-2 border rounded-md"
               />
+              {/* Email Field */}
               <input
                 type="email"
                 placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="p-2 border rounded-md"
               />
+              {/* Message Field */}
               <textarea
                 placeholder="Your Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="p-2 border rounded-md"
                 rows="4"
               ></textarea>
+              
+              {/* Error Message */}
+              {error && <div className="text-red-500 text-sm">{error}</div>}
+              
+              {/* Submit Button */}
               <button
                 type="submit"
                 className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600"

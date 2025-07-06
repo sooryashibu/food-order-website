@@ -79,6 +79,14 @@ const Header = ({ cartCount }) => {
       {/* Hamburger Menu Dropdown for Small Screens */}
       {isMenuOpen && (
         <div className="sm:hidden w-full bg-gray-800 absolute top-0 left-0 right-0 shadow-lg">
+          {/* Close Button (X) */}
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="absolute top-4 right-4 text-white text-2xl"
+          >
+            X
+          </button>
+
           <nav className="flex flex-col items-center py-4">
             <Link
               to="/"
